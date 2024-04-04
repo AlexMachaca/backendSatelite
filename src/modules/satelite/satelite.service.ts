@@ -28,7 +28,7 @@ export class SateliteService {
       await this.satelliteRepository.save(newSatellite);
   
       
-      const radius = 40; // Radio en metros alrededor del satélite principal
+      const radius = 40; // Radio en metros alrededor del satélite principal ultimo merge
       const numPoints = 5; 
       
       const centerLat = u.latitud;
