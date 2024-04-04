@@ -31,8 +31,8 @@ export class SateliteService {
       const radius = 40; // Radio en metros alrededor del satélite principal
       const numPoints = 5; // Número de satélites secundarios
       
-      const centerLat = u.latitud; // Latitud del satélite principal
-      const centerLng = u.longitud; // Longitud del satélite principal
+      const centerLat = u.latitud;
+      const centerLng = u.longitud; 
       const randomCoordinates = this.generateRandomCoordinates(centerLat, centerLng, radius, numPoints);
       
       for (const coord of randomCoordinates) {
@@ -40,7 +40,7 @@ export class SateliteService {
           latitud: coord.lat,
           longitud: coord.lng,
           temperature: coordT.temperature,
-          satelite: newSatellite, // Asigna el satélite principal
+          satelite: newSatellite,
         });
         await this.satelliteForanRepository.save(newSatelliteForan);
       }
