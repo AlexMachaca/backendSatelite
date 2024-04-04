@@ -28,9 +28,9 @@ export class SateliteService {
       await this.satelliteRepository.save(newSatellite);
   
       
-      const radius = 40; // Radio en metros alrededor del satélite principal ultimo merge
-      const numPoints = 5; 
-      
+      const radius = 40; // Radio en metros alrededor del satélite principalGIT
+      const numPoints = 5; // Número de satélites secundariosx
+    //xsasxas
       const centerLat = u.latitud;
       const centerLng = u.longitud; 
       const randomCoordinates = this.generateRandomCoordinates(centerLat, centerLng, radius, numPoints);
@@ -53,7 +53,7 @@ export class SateliteService {
   
   generateRandomCoordinates(centerLat: number, centerLng: number, radius: number, numPoints: number): { lat: number, lng: number }[] {
     const result = [];
-    const radiusInDegrees = radius / 111300; 
+    const radiusInDegrees = radius / 111300; // Approximate conversion from meters to degrees
   
     for (let i = 0; i < numPoints; i++) {
       const randomRadius = Math.random() * radiusInDegrees;
